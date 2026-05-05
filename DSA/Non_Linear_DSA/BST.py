@@ -43,6 +43,7 @@ def delete_node(root,value):
         elif root.right is None:
             return root.left
 
+        #replaced with the greater value and removed the duplicate
         temp=find_min(root.right)
         root.data=temp.data
         root.right=delete_node(root.right, temp.data)
